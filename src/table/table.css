@@ -1,0 +1,27 @@
+.Table {
+  color: var(--font-color, #333); 
+  font-family: var(--tertiary-font, sans-serif);
+}
+
+.Table__name {
+  font-family: var(--primary-font, serif);
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.Table table {
+  border-collapse: collapse;
+}
+
+.Table td, th {
+  padding: 0.5em 4em 0.5em 1em;
+  text-align: left;
+}
+
+.Table tr:nth-child(odd) {
+  background: #EEE;
+}
+
+.Table tr td:last-child, .Table tr th:last-child {
+  padding-right: 1em;
+}

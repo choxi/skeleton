@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./SimpleLayout.css" />
+    <style>
+      html { 
+        margin: 5px; 
+        padding: 5px;
+      }
+      
+      html, body, #SimpleLayout {
+        height: 100%;
+      }
+      
+      #SimpleLayout {
+        box-sizing: border-box;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="SimpleLayout"></div>
+  </body>
+
+  <script>
+    import React from 'react'
+    import ReactDOM from 'react-dom'
+    import SimpleLayout from './SimpleLayout.jsx'
+    
+    const Home = () => (
+      <div>
+        <h2>Home</h2>
+      </div>
+    )
+    
+    const About = () => (
+      <div>
+        <h2>About</h2>
+      </div>
+    )
+    
+    const Topics = () => (
+      <div>
+        <h2>Topics</h2>
+      </div>
+    )
+
+    let options = {
+      name: "Demo © 2017",
+      links: [
+        { to: "/",        label: "Home",    component: Home   },
+        { to: "/about",   label: "About",   component: About  },
+        { to: "/topics",  label: "Topics",  component: Topics }
+      ],
+      default: <h1>Hello World</h1>
+    }
+
+    ReactDOM.render(<SimpleLayout { ...options } />, document.querySelector("#SimpleLayout"))
+  </script>
+</html>

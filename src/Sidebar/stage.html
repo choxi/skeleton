@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./Sidebar.css" />
+    <style>
+      html { 
+        margin: 5px; 
+        padding: 5px 
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="Sidebar"></div>
+  </body>
+
+  <script>
+    import React from 'react'
+    import ReactDOM from 'react-dom'
+    import Sidebar from './Sidebar.jsx'
+
+    ReactDOM.render(<Sidebar />, document.querySelector("#Sidebar"))
+  </script>
+</html>

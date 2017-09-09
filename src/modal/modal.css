@@ -1,0 +1,8 @@
+.Modal {
+  height: 100%;
+  width: 100%;
+  background: #333;
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+}
