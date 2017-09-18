@@ -9,6 +9,16 @@
   "license": "ISC",
   "dependencies": {
     "react-highlight": "0.10.0",
+    "react-router-dom": "4.2.2",
     "react-spin": "0.6.2"
+  },
+  "devDependencies": {
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.0",
+    "babel-preset-react": "6.24.1",
+    "css-loader": "0.28.7",
+    "extract-text-webpack-plugin": "3.0.0",
+    "style-loader": "0.18.2",
+    "webpack": "3.6.0"
   }
 }
