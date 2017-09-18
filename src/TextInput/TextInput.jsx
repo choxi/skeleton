@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default class Input extends React.Component {
+export default class TextInput extends React.Component {
   constructor() {
     super()
     
@@ -14,7 +14,7 @@ export default class Input extends React.Component {
   }
   
   render() {
-    return <div className="Input">
+    return <div className="TextInput">
       <textarea 
         onChange={ this.handleChange }
         defaultValue={ this.props.defaultValue }

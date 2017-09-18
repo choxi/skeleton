@@ -1,8 +1,8 @@
 @import "../button/button.css";
 @import "../table/table.css";
 @import "../toggle/toggle.css";
-@import "../codesnippet/codesnippet.css";
-@import "../input/input.css";
+@import "../CodeSnippet/CodeSnippet.css";
+@import "../TextInput/TextInput.css";
 @import "../spinner/spinner.css";
 
 /* cyrillic-ext */
