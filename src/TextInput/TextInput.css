@@ -1,4 +1,4 @@
-.Input textarea {
+.TextInput textarea {
   border: 1px solid #DEDEDE;
   outline: none;
   font-size: var(--font-size, 14px);
@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.Input textarea:focus {
+.TextInput textarea:focus {
   border: 1px solid var(--highlight-color, #63d8fd);
   box-shadow: 0 0px 5px 0 rgba(99, 216, 253, 0.3);
 }
