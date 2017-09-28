@@ -1,4 +1,4 @@
-@import url(https://cdn.rawgit.com/isagalaev/highlight.js/cf4b46e5/src/styles/github-gist.css);.Button {
+@import url(https://cdn.rawgit.com/isagalaev/highlight.js/master/src/styles/railscasts.css);.Button {
   color: #333;
   display: inline-block;
   border: 1px solid #DDD;
@@ -59,7 +59,8 @@
   box-shadow: inset 0 1px 5px rgba(0,0,0,0.5);
 }
 .CodeSnippet {
-}.TextInput textarea {
+}
+.TextInput textarea {
   border: 1px solid #DEDEDE;
   outline: none;
   font-size: var(--font-size, 14px);
