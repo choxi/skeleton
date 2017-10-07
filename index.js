@@ -42480,6 +42480,51 @@ var SimpleLayout = function (_React$Component) {
   _createClass(SimpleLayout, [{
     key: 'render',
     value: function render() {
+      var sidebar = _react2.default.createElement(SimpleLayoutSidebar, { links: this.props.links });
+
+      if (this.props.nested) return _react2.default.createElement(
+        'div',
+        { className: 'SimpleLayout' },
+        sidebar
+      );else {
+        return _react2.default.createElement(
+          'div',
+          { className: 'SimpleLayout' },
+          _react2.default.createElement(
+            _reactRouterDom.BrowserRouter,
+            null,
+            sidebar
+          )
+        );
+      }
+    }
+  }]);
+
+  return SimpleLayout;
+}(_react2.default.Component);
+
+exports.default = SimpleLayout;
+
+
+SimpleLayout.defaultProps = {
+  links: []
+};
+
+var SimpleLayoutSidebar = function (_React$Component2) {
+  _inherits(SimpleLayoutSidebar, _React$Component2);
+
+  function SimpleLayoutSidebar(props) {
+    _classCallCheck(this, SimpleLayoutSidebar);
+
+    var _this2 = _possibleConstructorReturn(this, (SimpleLayoutSidebar.__proto__ || Object.getPrototypeOf(SimpleLayoutSidebar)).call(this, props));
+
+    if (_this2.props.links.length > 0) _this2.props.history.push(_this2.props.links[0].to);
+    return _this2;
+  }
+
+  _createClass(SimpleLayoutSidebar, [{
+    key: 'render',
+    value: function render() {
       var sidebarLinks = this.props.links.map(function (link) {
         return _react2.default.createElement(
           _reactRouterDom.NavLink,
@@ -42526,33 +42571,14 @@ var SimpleLayout = function (_React$Component) {
         )
       );
 
-      if (this.props.nested) return _react2.default.createElement(
-        'div',
-        { className: 'SimpleLayout' },
-        sidebar
-      );else {
-        return _react2.default.createElement(
-          'div',
-          { className: 'SimpleLayout' },
-          _react2.default.createElement(
-            _reactRouterDom.BrowserRouter,
-            null,
-            sidebar
-          )
-        );
-      }
+      return sidebar;
     }
   }]);
 
-  return SimpleLayout;
+  return SimpleLayoutSidebar;
 }(_react2.default.Component);
 
-exports.default = SimpleLayout;
-
-
-SimpleLayout.defaultProps = {
-  links: []
-};
+SimpleLayoutSidebar = (0, _reactRouterDom.withRouter)(SimpleLayoutSidebar);
 
 /***/ }),
 /* 394 */
