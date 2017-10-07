@@ -11999,6 +11999,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var themes = {};
+themes.github = '\n/*\ngithub.com style (c) Vasily Polovnyov <vast@whiteants.net>\n*/\n\n.hljs {\n  display: block;\n  overflow-x: auto;\n  padding: 0.5em;\n  color: #333;\n  background: #f8f8f8;\n}\n\n.hljs-comment,\n.hljs-quote {\n  color: #998;\n  font-style: italic;\n}\n\n.hljs-keyword,\n.hljs-selector-tag,\n.hljs-subst {\n  color: #333;\n  font-weight: bold;\n}\n\n.hljs-number,\n.hljs-literal,\n.hljs-variable,\n.hljs-template-variable,\n.hljs-tag .hljs-attr {\n  color: #008080;\n}\n\n.hljs-string,\n.hljs-doctag {\n  color: #d14;\n}\n\n.hljs-title,\n.hljs-section,\n.hljs-selector-id {\n  color: #900;\n  font-weight: bold;\n}\n\n.hljs-subst {\n  font-weight: normal;\n}\n\n.hljs-type,\n.hljs-class .hljs-title {\n  color: #458;\n  font-weight: bold;\n}\n\n.hljs-tag,\n.hljs-name,\n.hljs-attribute {\n  color: #000080;\n  font-weight: normal;\n}\n\n.hljs-regexp,\n.hljs-link {\n  color: #009926;\n}\n\n.hljs-symbol,\n.hljs-bullet {\n  color: #990073;\n}\n\n.hljs-built_in,\n.hljs-builtin-name {\n  color: #0086b3;\n}\n\n.hljs-meta {\n  color: #999;\n  font-weight: bold;\n}\n\n.hljs-deletion {\n  background: #fdd;\n}\n\n.hljs-addition {\n  background: #dfd;\n}\n\n.hljs-emphasis {\n  font-style: italic;\n}\n\n.hljs-strong {\n  font-weight: bold;\n} \n';
+
+themes.railscasts = '\n/*\n\nRailscasts-like style (c) Visoft, Inc. (Damien White)\n\n*/\n\n.hljs {\n  display: block;\n  overflow-x: auto;\n  padding: 0.5em;\n  background: #232323;\n  color: #e6e1dc;\n}\n\n.hljs-comment,\n.hljs-quote {\n  color: #bc9458;\n  font-style: italic;\n}\n\n.hljs-keyword,\n.hljs-selector-tag {\n  color: #c26230;\n}\n\n.hljs-string,\n.hljs-number,\n.hljs-regexp,\n.hljs-variable,\n.hljs-template-variable {\n  color: #a5c261;\n}\n\n.hljs-subst {\n  color: #519f50;\n}\n\n.hljs-tag,\n.hljs-name {\n  color: #e8bf6a;\n}\n\n.hljs-type {\n  color: #da4939;\n}\n\n\n.hljs-symbol,\n.hljs-bullet,\n.hljs-built_in,\n.hljs-builtin-name,\n.hljs-attr,\n.hljs-link {\n  color: #6d9cbe;\n}\n\n.hljs-params {\n  color: #d0d0ff;\n}\n\n.hljs-attribute {\n  color: #cda869;\n}\n\n.hljs-meta {\n  color: #9b859d;\n}\n\n.hljs-title,\n.hljs-section {\n  color: #ffc66d;\n}\n\n.hljs-addition {\n  background-color: #144212;\n  color: #e6e1dc;\n  display: inline-block;\n  width: 100%;\n}\n\n.hljs-deletion {\n  background-color: #600;\n  color: #e6e1dc;\n  display: inline-block;\n  width: 100%;\n}\n\n.hljs-selector-class {\n  color: #9b703f;\n}\n\n.hljs-selector-id {\n  color: #8b98ab;\n}\n\n.hljs-emphasis {\n  font-style: italic;\n}\n\n.hljs-strong {\n  font-weight: bold;\n}\n\n.hljs-link {\n  text-decoration: underline;\n}\n';
+
+themes["github-gists"] = '\n/**\n * GitHub Gist Theme\n * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro\n */\n\n.hljs {\n  display: block;\n  background: white;\n  padding: 0.5em;\n  color: #333333;\n  overflow-x: auto;\n}\n\n.hljs-comment,\n.hljs-meta {\n  color: #969896;\n}\n\n.hljs-string,\n.hljs-variable,\n.hljs-template-variable,\n.hljs-strong,\n.hljs-emphasis,\n.hljs-quote {\n  color: #df5000;\n}\n\n.hljs-keyword,\n.hljs-selector-tag,\n.hljs-type {\n  color: #a71d5d;\n}\n\n.hljs-literal,\n.hljs-symbol,\n.hljs-bullet,\n.hljs-attribute {\n  color: #0086b3;\n}\n\n.hljs-section,\n.hljs-name {\n  color: #63a35c;\n}\n\n.hljs-tag {\n  color: #333333;\n}\n\n.hljs-title,\n.hljs-attr,\n.hljs-selector-id,\n.hljs-selector-class,\n.hljs-selector-attr,\n.hljs-selector-pseudo {\n  color: #795da3;\n}\n\n.hljs-addition {\n  color: #55a532;\n  background-color: #eaffea;\n}\n\n.hljs-deletion {\n  color: #bd2c00;\n  background-color: #ffecec;\n}\n\n.hljs-link {\n  text-decoration: underline;\n}\n';
+
 /**
  * @name CodeSnippet
  * @prop {string} [lang] - Langage that code is written in (for syntax highlighting).
@@ -12012,6 +12019,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
  * <CodeSnippet lang="javascript">{ code }</CodeSnippet>
  *
  */
+
 var CodeSnippet = function (_React$Component) {
   _inherits(CodeSnippet, _React$Component);
 
@@ -12028,6 +12036,11 @@ var CodeSnippet = function (_React$Component) {
         'div',
         { className: 'CodeSnippet' },
         _react2.default.createElement(
+          'style',
+          null,
+          themes[this.props.theme]
+        ),
+        _react2.default.createElement(
           _reactHighlight2.default,
           { className: this.props.lang },
           this.props.children
@@ -12040,6 +12053,11 @@ var CodeSnippet = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = CodeSnippet;
+
+
+CodeSnippet.defaultProps = {
+  theme: "github-gists"
+};
 
 /***/ }),
 /* 108 */

@@ -1,4 +1,4 @@
-@import url(https://cdn.rawgit.com/isagalaev/highlight.js/master/src/styles/railscasts.css);.Button {
+.Button {
   color: #333;
   display: inline-block;
   border: 1px solid #DDD;
