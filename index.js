@@ -42480,7 +42480,7 @@ var SimpleLayout = function (_React$Component) {
   _createClass(SimpleLayout, [{
     key: 'render',
     value: function render() {
-      var sidebar = _react2.default.createElement(SimpleLayoutSidebar, { links: this.props.links });
+      var sidebar = _react2.default.createElement(SimpleLayoutSidebar, this.props);
 
       if (this.props.nested) return _react2.default.createElement(
         'div',
@@ -42566,7 +42566,6 @@ var SimpleLayoutSidebar = function (_React$Component2) {
         _react2.default.createElement(
           'div',
           { className: 'SimpleLayout__panel' },
-          this.props.default,
           routes
         )
       );

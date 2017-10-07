@@ -8,8 +8,8 @@ import {
 
 export default class SimpleLayout extends React.Component {
   render() {
-    let sidebar = <SimpleLayoutSidebar links={ this.props.links } />
-
+    let sidebar = <SimpleLayoutSidebar { ...this.props } />
+  
     if(this.props.nested)
       return <div className="SimpleLayout">
         { sidebar }
@@ -29,27 +29,27 @@ SimpleLayout.defaultProps = {
 class SimpleLayoutSidebar extends React.Component {
   constructor(props) {
     super(props)
-
+    
     if(this.props.links.length > 0)
       this.props.history.push(this.props.links[0].to)
   }
-
+  
   render() {
     let sidebarLinks = this.props.links.map((link) => {
       return <NavLink exact key={ link.label } to={ link.to }>
         <li key={ link.label }>{ link.label }</li>
       </NavLink>
     })
-
+    
     let routes = this.props.links.map((link) => {
-      return <Route
-        key={ link.label }
-        exact
-        path={ link.to }
-        component={ link.component }
+      return <Route 
+        key={ link.label } 
+        exact 
+        path={ link.to } 
+        component={ link.component } 
       />
     })
-
+    
     let sidebar = <div className="SimpleLayout__container">
       <div className="SimpleLayout__sidebar">
         <ul>
@@ -59,13 +59,12 @@ class SimpleLayoutSidebar extends React.Component {
           { this.props.name }
         </div>
       </div>
-
+      
       <div className="SimpleLayout__panel">
-        { this.props.default }
         { routes }
       </div>
     </div>
-
+    
     return sidebar
   }
 }
